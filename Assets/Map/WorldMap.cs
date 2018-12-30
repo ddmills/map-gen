@@ -16,30 +16,24 @@ namespace Depski.Map {
 		[SerializeField]
 		private int smoothingIterations;
 		[SerializeField]
-		private Map map;
+		private GameObject sitePrefab;
+		[SerializeField]
+		private GameObject roadPrefab;
+		[SerializeField]
+		public Map Map { get; private set; }
 
 		void Start () {
 			Random.InitState(seed);
-			map = MapFactory.Create(locationCount, radius, smoothingIterations, roadDensity);
-		}
+			Map = MapFactory.Create(locationCount, radius, smoothingIterations, roadDensity);
 
-		public void OnDrawGizmos() {
-			if (map == null) {
-				return;
+			foreach (Vertex vertex in Map.Vertices) {
+				GameObject siteOb = Instantiate(sitePrefab, this.transform);
+				siteOb.GetComponent<Site>().Init(vertex.ID);
 			}
 
-			foreach (Edge edge in map.Edges) {
-				if (edge.Type == EdgeType.ROAD) {
-					Gizmos.color = Color.red;
-					Gizmos.DrawLine(edge.V0.vector3, edge.V1.vector3);
-				} else {
-					Gizmos.color = Color.black;
-				}
-			}
-
-			foreach (Vertex vertex in map.Vertices) {
-				Gizmos.color = Color.black;
-				Gizmos.DrawSphere(vertex.vector3, 1);
+			foreach (Edge road in Map.Roads) {
+				GameObject roadOb = Instantiate(roadPrefab, this.transform);
+				roadOb.GetComponent<Road>().Init(road.ID);
 			}
 		}
 	}

@@ -12,7 +12,7 @@ namespace Depski.Map {
 		public IEnumerable<Edge> Edges {
 			get { return EdgeIds.Select(id => map.GetEdge(id)); }
 		}
-		public Vector3 vector3 {
+		public Vector3 Position {
 			get { return new Vector3(X, 0, Y); }
 		}
 		public IEnumerable<Vertex> Neighbors {
@@ -32,7 +32,7 @@ namespace Depski.Map {
 		}
 
 		public float Distance(Vertex other) {
-			return Vector3.Distance(vector3, other.vector3);
+			return Vector3.Distance(Position, other.Position);
 		}
 
 		public Edge GetEdge(Vertex other) {

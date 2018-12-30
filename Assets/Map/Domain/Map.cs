@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Depski.Map {
 	public class Map {
@@ -15,6 +16,9 @@ namespace Depski.Map {
 		}
 		public int EdgeCount {
 			get { return Edges.Count; }
+		}
+		public IEnumerable<Edge> Roads {
+			get { return Edges.Where(e => e.Type == EdgeType.ROAD); }
 		}
 		private int currentId;
 		private int NextID {

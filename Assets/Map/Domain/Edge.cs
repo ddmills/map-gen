@@ -1,3 +1,4 @@
+using UnityEngine;
 
 namespace Depski.Map {
 	public class Edge {
@@ -14,6 +15,9 @@ namespace Depski.Map {
 			get { return map.GetVertex(V1ID); }
 		}
 
+		public Vector3 Center {
+			get { return (V0.Position + V1.Position) / 2; }
+		}
 		public float Length {
 			get { return V0.Distance(V1); }
 		}
