@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: NaN, g: NaN, b: NaN, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -113,6 +113,48 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &127753474
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4792753798062654, guid: f4cc45328a28d044f988e39d840889c7, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4792753798062654, guid: f4cc45328a28d044f988e39d840889c7, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4792753798062654, guid: f4cc45328a28d044f988e39d840889c7, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4792753798062654, guid: f4cc45328a28d044f988e39d840889c7, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4792753798062654, guid: f4cc45328a28d044f988e39d840889c7, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4792753798062654, guid: f4cc45328a28d044f988e39d840889c7, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4792753798062654, guid: f4cc45328a28d044f988e39d840889c7, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4792753798062654, guid: f4cc45328a28d044f988e39d840889c7, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f4cc45328a28d044f988e39d840889c7, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,6 +282,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &989551614
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4776056334879476, guid: 63307e034ee7df248886327c44cc9d90, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776056334879476, guid: 63307e034ee7df248886327c44cc9d90, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776056334879476, guid: 63307e034ee7df248886327c44cc9d90, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776056334879476, guid: 63307e034ee7df248886327c44cc9d90, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776056334879476, guid: 63307e034ee7df248886327c44cc9d90, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776056334879476, guid: 63307e034ee7df248886327c44cc9d90, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776056334879476, guid: 63307e034ee7df248886327c44cc9d90, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776056334879476, guid: 63307e034ee7df248886327c44cc9d90, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1297523578834996, guid: 63307e034ee7df248886327c44cc9d90, type: 2}
+      propertyPath: m_Name
+      value: MeepleManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 63307e034ee7df248886327c44cc9d90, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1001 &1492730467
 Prefab:
   m_ObjectHideFlags: 0
@@ -282,21 +370,6 @@ Prefab:
     - target: {fileID: 1010965953641300, guid: ff66adbf0c62a0a449fbad1b90e0ada3, type: 2}
       propertyPath: m_Name
       value: WorldMap
-      objectReference: {fileID: 0}
-    - target: {fileID: 114470519249606944, guid: ff66adbf0c62a0a449fbad1b90e0ada3,
-        type: 2}
-      propertyPath: roadDensity
-      value: 0.333
-      objectReference: {fileID: 0}
-    - target: {fileID: 114470519249606944, guid: ff66adbf0c62a0a449fbad1b90e0ada3,
-        type: 2}
-      propertyPath: locationCount
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 114470519249606944, guid: ff66adbf0c62a0a449fbad1b90e0ada3,
-        type: 2}
-      propertyPath: smoothingIterations
-      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff66adbf0c62a0a449fbad1b90e0ada3, type: 2}

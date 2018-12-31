@@ -23,7 +23,7 @@ namespace Depski.Map {
 		[SerializeField]
 		public Map Map { get; private set; }
 
-		void Start () {
+		public Map Init() {
 			Random.InitState(seed);
 			Map = MapFactory.Create(locationCount, radius, smoothingIterations, roadDensity);
 
@@ -37,8 +37,7 @@ namespace Depski.Map {
 				roadOb.GetComponent<Road>().Init(road.ID);
 			}
 
-			Map.Vertices.First().isDiscovered = true;
-			Map.Vertices.First().isExplored = true;
+			return Map;
 		}
 	}
 }
