@@ -21,6 +21,8 @@ namespace Depski.Map {
 		public float Length {
 			get { return V0.Distance(V1); }
 		}
+		public Road road;
+		public bool isDiscovered;
 
 		public Edge(Map map, int id, int v0ID, int v1ID) {
 			this.map = map;
@@ -29,6 +31,7 @@ namespace Depski.Map {
 			V1ID = v1ID;
 			MST = false;
 			Type = EdgeType.NONE;
+			isDiscovered = false;
 			V0.OnEdgeConnected(this);
 			V1.OnEdgeConnected(this);
 		}

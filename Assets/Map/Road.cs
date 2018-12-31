@@ -6,7 +6,7 @@ namespace Depski.Map {
 	public class Road : MonoBehaviour {
 		[SerializeField]
 		private int edgeId;
-		private Edge Edge {
+		public Edge Edge {
 			get { return WorldMap.Instance.Map.GetEdge(edgeId); }
 		}
 
@@ -19,6 +19,7 @@ namespace Depski.Map {
 				transform.localScale.y,
 				Edge.Length
 			);
+			Edge.road = this;
 		}
 	}
 }

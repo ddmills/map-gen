@@ -55,7 +55,7 @@ MonoBehaviour:
   seed: 1
   locationCount: 100
   radius: 100
-  roadDensity: 0.3
+  roadDensity: 0.6
   smoothingIterations: 10
   sitePrefab: {fileID: 1770450291998178, guid: 5c6157fd50b22ad4d950432657898036, type: 2}
   roadPrefab: {fileID: 1638886238568344, guid: 0e29d3c6b5f14994abd53f963c8fad86, type: 2}

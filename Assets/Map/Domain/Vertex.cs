@@ -18,6 +18,15 @@ namespace Depski.Map {
 		public IEnumerable<Vertex> Neighbors {
 			get { return Edges.Select(e => e.Opposite(this)); }
 		}
+		public IEnumerable<Edge> Roads {
+			get { return Edges.Where(e => e.Type == EdgeType.ROAD); }
+		}
+		public IEnumerable<Vertex> Connected {
+			get { return Roads.Select(r => r.Opposite(this)); }
+		}
+		public bool isExplored;
+		public bool isDiscovered;
+		public Site site;
 
 		public Vertex(Map map, int id, float x, float y) {
 			this.map = map;

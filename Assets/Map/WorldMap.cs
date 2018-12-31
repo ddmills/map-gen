@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Linq;
 
 namespace Depski.Map {
 	using Depski.Generic;
@@ -35,6 +36,9 @@ namespace Depski.Map {
 				GameObject roadOb = Instantiate(roadPrefab, this.transform);
 				roadOb.GetComponent<Road>().Init(road.ID);
 			}
+
+			Map.Vertices.First().isDiscovered = true;
+			Map.Vertices.First().isExplored = true;
 		}
 	}
 }
