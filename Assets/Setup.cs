@@ -17,6 +17,8 @@ public class Setup : MonoBehaviour {
 
 		Depski.Meeples.MeepleManager.Instance.AddMeeple(startingLocation);
 		Depski.Meeples.MeepleManager.Instance.AddMeeple(startingLocation);
+
+		Depski.Camera.MainCamera.Instance.LookAt(startingVertex.Position);
 	}
 }
 
